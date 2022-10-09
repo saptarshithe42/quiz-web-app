@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="entry">
+        <h1>Welcome to Quiz App</h1>
+        <h1>Test your knowledge</h1>
+
+        <div class="form-div">
+            <form action="/" method="post">
+                <div class="form-elements">
+                    <label for="playerName">Enter player name :</label>
+                    <input type="text" placeholder="Enter name" name="playerName" class="input-elements" required>
+                </div>
+                <br>
+                <div class="form-elements">
+                    <label for="numOfQuestions">Enter number of questions :</label>
+                    <input type="number" max="19" min="1" name="numOfQuestions" value="5" class="input-elements"
+                        required>
+                </div>
+                <br>
+                <div class="form-elements">
+                    <fieldset class="radio-buttons">
+                        <legend>Select difficulty level :-</legend>
+
+                        <div>
+                            <input type="radio" id="easy" name="difficultyLevel" value="easy" checked>
+                            <label for="easy">Easy</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="medium" name="difficultyLevel" value="medium">
+                            <label for="medium">Medium</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="hard" name="difficultyLevel" value="hard">
+                            <label for="hard">Hard</label>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="start-button btn">Start</button>
+                    <br>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

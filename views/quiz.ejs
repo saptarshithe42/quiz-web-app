@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/css/quizPageStyle.css">
+</head>
+
+<body>
+
+
+    <h1>Question : <%= currentQuesNum - 1 %>
+    </h1>
+
+    <h3>Score : <%= playerScore %> </h3>
+
+    <div class="question">
+        <%= currentQuizData.question %>
+    </div>
+
+
+    <form action="/quiz/<%= currentQuesNum %>" method="post" class="answer-form">
+
+        <div class="container">
+            <% for( let i=0; i < answers.length; i++ ) { %>
+
+                <div class="options-div">
+                    <input type="radio" id="<%= answers[i] %>" name="givenAnswer" value="<%= answers[i] %>"
+                        class="radio-buttons" checked>
+                    <label for="<%= answers[i] %>" class="labels">
+                        <%= answers[i] %>
+                    </label>
+                </div>
+                <% } %>
+
+        </div>
+        <br>
+        <br>
+        <button value="<%= currentQuesNum %>" type="submit" class="btn">submit</button>
+
+    </form>
+
+</body>
+
+</html>

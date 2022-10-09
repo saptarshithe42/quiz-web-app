@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/css/quizPageStyle.css">
+
+    <style>
+
+        html,body{
+            /* display: flex; */
+         
+            height: 100%;
+            
+        }
+
+        .btn {
+            /* flex-direction: row; */
+            /* align-items: flex-start; */
+            
+    -webkit-border-radius: 60;
+    -moz-border-radius: 60;
+    border-radius: 60px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: #5752e3;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+  }
+  
+.btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+  }
+    </style>
+
+</head>
+<body>
+
+
+
+    
+    <form action="/quiz/<%= currentQuesNum %>" method="post">
+
+        <button value="<%= currentQuesNum %>" type="submit" class="btn">Go!</button>
+
+    </form>
+
+</body>
+</html>

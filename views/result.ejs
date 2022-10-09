@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/css/quizPageStyle.css">
+</head>
+
+<body>
+
+    <h1>Thanks for playing <%= playerName %>! </h1>
+    <h1>Score : <%= playerScore %> / <%= correctAnswerArray.length %></h1>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Question No.</th>
+                <th>Correct Answer</th>
+                <th>Given Answer</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% for( let i=0; i < correctAnswerArray.length; i++ ) { %>
+            <tr>
+                <td> <%= i + 1 %>  </td>
+                <td>  <%= correctAnswerArray[i] %> </td>
+                <td> <%= givenAnswerArray[i] %> </td>
+                <td> <%= answerStatus[i] %> </td>
+            </tr>
+
+            <% } %>
+        </tbody>
+    </table>
+
+
+    <form action="/" method="post">
+
+        <a href="/" class="btn">Start Again?</a>
+
+    </form>
+
+</body>
+
+</html>
