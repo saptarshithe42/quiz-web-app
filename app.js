@@ -237,6 +237,6 @@ app.post("/quiz/:quesNum", function (req, res) {
 
 
 // starting the server
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log("Server successfully started");
 });
